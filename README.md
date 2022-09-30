@@ -107,3 +107,4 @@ _Modifie la méthode `attack` de `Hero` afin que les dégâts soient calculés d
 **_Bonus 2 : Interface graphique_**
 
 _Réalise une interface graphique pour l'application (par exemple, avec un choix de héros et d'armes, et un visuel sur les dégâts infligés)_
+    

@@ -1,3 +1,6 @@
+import { Hero, HeroAxe, HeroSpear, HeroSword } from "./hero";
+import { Weapon } from "./weapon";
+
 let message: string = "Hello !";
 console.log(message);
 
@@ -227,12 +230,8 @@ class Employee extends Person {
 
 // ### Partie 1 : Héros
 
-import { Hero } from "./hero";
-import { Weapon } from "./weapon";
-
 let jedi1: Hero = new Hero("leon", 100, 200);
 let jedi2: Hero = new Hero("Joan", 100, 150);
-let wep = new Weapon("bratislava");
 
 jedi1.attack(jedi2);
 
@@ -241,3 +240,15 @@ jedi1.attack(jedi2);
 console.log(jedi2);
 
 // ### Partie 2 : Armes
+
+let sword: Weapon = new Weapon("sword");
+let axe: Weapon = new Weapon("axe");
+let spear: Weapon = new Weapon("spear");
+
+let heroSword: HeroSword = new HeroSword("john", 50, 100, sword);
+let heroSpear: HeroSpear = new HeroSpear("billy", 50, 90, spear);
+let heroAxe: HeroAxe = new HeroAxe("stan", 80, 100, axe);
+
+heroSword.attack(heroAxe);
+heroAxe.attack(heroSpear);
+heroSpear.attack(heroSword);

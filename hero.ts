@@ -1,8 +1,10 @@
+import { Weapon } from "./weapon";
+
 export class Hero {
   name: string;
   power: number;
   life: number;
-  weapon: Weapon;
+  weapon!: Weapon;
 
   constructor(paramName: string, paramPower: number, paramLife: number) {
     this.name = paramName;
@@ -24,23 +26,35 @@ export class Hero {
   }
 }
 
-import { Weapon } from "./weapon";
-
 export class HeroAxe extends Hero {
   constructor(name: string, power: number, life: number, weapon: Weapon) {
     super(name, power, life);
     this.weapon = weapon;
+  }
+
+  attack(opponent: Hero): void {
+    this.power = this.power * 2;
   }
 }
 
 export class HeroSword extends Hero {
   constructor(name: string, power: number, life: number, weapon: Weapon) {
     super(name, power, life);
+    this.weapon = weapon;
+  }
+
+  attack(opponent: Hero): void {
+    this.power = this.power * 2;
   }
 }
 
 export class HeroSpear extends Hero {
   constructor(name: string, power: number, life: number, weapon: Weapon) {
     super(name, power, life);
+    this.weapon = weapon;
+  }
+
+  attack(opponent: Hero): void {
+    this.power = this.power * 2;
   }
 }
